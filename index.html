@@ -34,16 +34,18 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto ml-auto navigation-custom-group">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Beranda</a>
+                            <a class="nav-link" href="">Beranda</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Prototype</a>
+                            <a class="nav-link" href="javascript:void(0)"
+                                onClick="scrollAnimate('feature')">Prototype</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Fitur</a>
+                            <a class="nav-link" href="javascript:void(0)" onClick="scrollAnimate('feature')">Fitur</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Team Ngekost</a>
+                            <a class="nav-link" href="javascript:void(0)" onClick="scrollAnimate('team')">Team
+                                Ngekost</a>
                         </li>
                     </ul>
                     <form class="form-inline  my-lg-0">
@@ -79,7 +81,7 @@
             </div>
         </div>
     </section>
-    <section class="feature-wrapper">
+    <section class="feature-wrapper" id="feature">
         <img src="images/pattern.png" class="pattern-feature-wrapper">
         <div class="container">
             <div class="row">
@@ -128,9 +130,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex justify-content-center w-100 mt-5">
-                    <a href="javascript:void(0)"><button type="button"
-                            class="btn btn-prototype-feature">Prototype</button></a>
+                <div class="d-flex justify-content-center w-100 mt-5" style="z-index:3">
+                    <a
+                        href="https://www.figma.com/proto/GLfUB1gZsmsm89fZ7LC8cF/Ngekost-Prototype?node-id=14%3A2175&scaling=scale-down"><button
+                            type="button" class="btn btn-prototype-feature">Prototype</button></a>
                 </div>
             </div>
         </div>
@@ -186,7 +189,7 @@
             </div>
         </div>
     </section>
-    <section class="testimonial-wrapper">
+    <section class="testimonial-wrapper" id="team">
         <div class="container">
             <div class="text-subtitle-testimonial">TEAM NGEKOST</div>
             <div class="text-title-testimonial">Apa yang kami harapakan</div>
@@ -259,6 +262,14 @@
                 $(".navbar-custom").addClass("shadow-nav") :
                 $(".navbar-custom").removeClass("shadow-nav");
         });
+
+        function scrollAnimate(target) {
+            return event.preventDefault({
+                behavior: "smooth"
+            }), $("html, body").animate({
+                scrollTop: $($(this).attr(target)).offset().top
+            }, "slow"), !1
+        }
     </script>
 </body>
 

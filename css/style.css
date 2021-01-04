@@ -412,6 +412,7 @@ html{
     }
 }
 .tips-wrapper{
+    z-index:3;
     padding: 4em 0 2em 0;
     background: linear-gradient(105.18deg, #f6c416 -2.04%, #FAEF36 107.42%);
 }
@@ -419,10 +420,12 @@ html{
     color: #22242F;
     font-size: 12px;
     font-weight: 500;
+    z-index:3;
     letter-spacing: 1px;
 }
 .tips-wrapper .text-title-tips{
     font-size: 28px;
+    z-index:3;
     font-weight: 500;
     padding-bottom: 50px;
     color: #ffffff;
@@ -793,6 +796,7 @@ html{
     left: 0;
     top: 15em;
     width: 52%;
+    z-index:-1;
     height: 900px;
 }
 @media(max-width:992px){
